@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="一个法务从 0 到 1 搭建 AI 检索系统的过程记录">
+<title>合规 × AI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================================
+   ✏️ 修改文字小提示
+   - 想改文字，搜 "✏️" 就能跳到所有可改的位置
+   - 只动 > 和 < 之间的内容（标签里夹的那段中文）
+   - 不要碰 < > 这些尖括号，也不要删带 class= 的部分
+   - 改完保存，刷新浏览器即可
+   ============================================================ -->
+
+<!-- ============ Hero 区 ============ -->
+<section class="section hero">
+  <div class="container">
+    <div class="hero-title-row">
+      <span class="accent-bar"></span>
+      <!-- ✏️ 可改：Hero 主标题 -->
+      <h1 class="serif">合规 × AI</h1>
+    </div>
+    <!-- ✏️ 可改：Hero 副标题（<br> 是换行符，想换行就保留它） -->
+    <p class="hero-subtitle">尝试用 Agent 做一个网页，作为一个对外的名片展示。<br></p>
+    <div class="hero-buttons">
+      <!-- ✏️ 可改：两个按钮文字（箭头 ↓ → 别动） -->
+      <a href="#project" class="btn btn-primary"><span>查看项目</span><span class="btn-arrow btn-arrow-down">↓</span></a>
+      <a href="#writing" class="btn btn-secondary"><span>阅读文章</span><span class="btn-arrow btn-arrow-right">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ About 区 ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <!-- ✏️ 可改：About 标签 -->
+    <div class="section-tag">01 / ABOUT</div>
+    <!-- ✏️ 可改：About 标题 -->
+    <h2 class="serif section-title">关于这个站点</h2>
+    <!-- ✏️ 可改：About 正文 -->
+    <p class="section-body">一个非技术人员探索利用 Agent 建立 AI 检索系统的过程记录。<br>把过去一段时间用 Agent 搭建知识库检索系统的过程整理成可视化的形式，记录怎么规范 AI 任务执行流程，怎么让结果稳定，怎么用工程师的思维去想问题。</p>
+  </div>
+</section>
+
+<!-- ============ Project 区 · 核心 ============ -->
+<section class="section project" id="project">
+  <div class="container">
+    <div class="section-tag">02 / PROJECT</div>
+    <h2 class="serif section-title">内部知识库 AI 检索系统</h2>
+    <p class="section-body subtitle">从 0 到 1 建设 · 三阶段迭代 · 质量保障闭环</p>
+    <div class="tag-list">
+      <span class="tag">AI Agent</span>
+      <span class="tag">Skill 机制</span>
+      <span class="tag">知识库检索</span>
+    </div>
+
+    <!-- ===== 幕一 · 演进 ===== -->
+    <div class="act-block" id="act-1">
+      <div class="act-tag">幕一 · 演进</div>
+      <h3 class="serif act-title">三阶段演进路径</h3>
+      <p class="act-desc">能用 → 可靠 → 可持续</p>
+
+      <div class="timeline" data-component="timeline">
+        <div class="timeline-track">
+          <span class="track-flow"></span>
+        </div>
+        <button class="timeline-node active" data-stage="1" aria-label="阶段 01">
+          <span class="node-pulse"></span>
+          <span class="node-circle">01</span>
+          <span class="node-label">能用</span>
+          <span class="node-sub">从零搭建</span>
+        </button>
+        <button class="timeline-node" data-stage="2" aria-label="阶段 02">
+          <span class="node-pulse"></span>
+          <span class="node-circle">02</span>
+          <span class="node-label">可靠</span>
+          <span class="node-sub">质量保障</span>
+        </button>
+        <button class="timeline-node" data-stage="3" aria-label="阶段 03">
+          <span class="node-pulse"></span>
+          <span class="node-circle">03</span>
+          <span class="node-label">可持续</span>
+          <span class="node-sub">长期运行</span>
+        </button>
+      </div>
+
+      <div class="stage-content" data-stage-content="1">
+        <div class="stage-header">
+          <span class="stage-num">阶段 01 · 详细说明</span>
+          <h4 class="serif">从零搭建，让功能"能用"</h4>
+        </div>
+        <div class="stage-grid">
+          <div class="stage-card">
+            <div class="card-tag">▸ 痛点</div>
+            <div class="card-text">原平台只能字段筛选与分页浏览，找历史案例需逐条翻阅，效率不足。</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 解法</div>
+            <div class="card-text">结构化录入数据，通过需求描述让 AI 实现自然语言理解、附件解析，限制数据来源避免幻觉。</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 关键产出</div>
+            <div class="card-text">基础能用的初版功能；同时暴露出"输出不稳"和"漏检严重"两大问题。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-content" data-stage-content="2" hidden>
+        <div class="stage-header">
+          <span class="stage-num">阶段 02 · 详细说明</span>
+          <h4 class="serif">从能用到可靠，建立质量保障体系</h4>
+        </div>
+        <div class="stage-grid">
+          <div class="stage-card">
+            <div class="card-tag">▸ 痛点</div>
+            <div class="card-text">输出质量不稳定<br>+ 漏检严重</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 解法</div>
+            <div class="card-text">生成Skill 规范<br>+ 检索策略升级</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 关键产出</div>
+            <div class="card-text">沉淀流程规范<br>+ 自学习机制</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-content" data-stage-content="3" hidden>
+        <div class="stage-header">
+          <span class="stage-num">阶段 03 · 详细说明</span>
+          <h4 class="serif">从可靠到可持续，面向长期运行的升级</h4>
+        </div>
+        <div class="stage-grid">
+          <div class="stage-card">
+            <div class="card-tag">▸ 痛点</div>
+            <div class="card-text">数据文件格式混杂、每次全量解析带来的时间和token损耗、自学习规则未经验证就生效。</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 解法</div>
+            <div class="card-text">统一为 Markdown + 结构化表 · 引入指纹缓存 · 加入规则分层与回归测试。</div>
+          </div>
+          <div class="stage-card">
+            <div class="card-tag">▸ 关键产出</div>
+            <div class="card-text">三道质量保障机制：分层隔离 · 人工评审 · 回归验证。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 幕二 · 机制 ===== -->
+    <div class="act-block" id="act-2">
+      <div class="act-tag">幕二 · 机制</div>
+      <h3 class="serif act-title">Skill 是怎么工作的</h3>
+      <p class="act-desc">三个视角分别说明：整体架构 · 分层升级 · 检索流程</p>
+
+      <!-- 桌面端 Tab -->
+      <div class="tabs desktop-only" data-component="tabs">
+        <button class="tab active" data-tab="b1">B-1 整体架构</button>
+        <button class="tab" data-tab="b2">B-2 分层升级</button>
+        <button class="tab" data-tab="b3">B-3 检索流程</button>
+      </div>
+
+      <!-- 移动端下拉 -->
+      <div class="tabs-mobile mobile-only">
+        <select data-component="tabs-select" aria-label="切换视图">
+          <option value="b1">B-1 整体架构</option>
+          <option value="b2">B-2 分层升级</option>
+          <option value="b3">B-3 检索流程</option>
+        </select>
+      </div>
+
+      <!-- B-1 整体架构 -->
+      <div class="tab-panel active" data-panel="b1">
+        <p class="panel-intro">一份主规范 + 三份经验文件，构成一套可被反复读取的"操作手册"。</p>
+        <div class="code-block">
+          <pre><span class="dim">skills/ 知识库检索/</span>
+<span class="dim">├──</span> <span class="hl">SKILL.md</span>             <span class="dim">←</span> 主规范（流程 + 格式 + 标准）
+<span class="dim">└──</span> <span class="hl">references/</span>
+    <span class="dim">├──</span> known_patterns.md   <span class="dim">←</span> 已知检索模式库
+    <span class="dim">├──</span> edge_cases.md       <span class="dim">←</span> 边界案例和踩坑记录
+    <span class="dim">└──</span> output_templates.md <span class="dim">←</span> 输出格式模板（固定）</pre>
+        </div>
+        <p class="panel-note">SKILL.md 是入口；references 是 AI 检索时会加载的经验文件。</p>
+      </div>
+
+      <!-- B-2 分层升级 -->
+      <div class="tab-panel" data-panel="b2" hidden>
+        <p class="panel-intro">把"未经验证的新规则"和"已验证的旧规则"隔离 · AI 写入不直接生效。</p>
+        <div class="code-block">
+          <pre><span class="dim">references/</span>
+<span class="dim">├──</span> known_patterns.md   <span class="dim">←</span> <span class="badge badge-blue">L1+L2</span> 正式生效
+<span class="dim">├──</span> edge_cases.md       <span class="dim">←</span> <span class="badge badge-blue">L1+L2</span> 正式生效
+<span class="dim">├──</span> output_templates.md <span class="dim">←</span> 不变</pre>
+        </div>
+        <div class="highlight-row">
+          <div class="highlight-label">└──</div>
+          <div class="highlight-content">
+            <div class="highlight-head">
+              <span class="hl-name">pending.md</span>
+              <span class="badge badge-solid">L3</span>
+              <span class="hl-text">候选层（只写入，不加载）</span>
+            </div>
+            <div class="hl-desc">AI 新发现规则自行写入此处 → 人工发起审核流程 → 通过才迁移到 L1+L2</div>
+          </div>
+        </div>
+        <div class="panel-readhint">
+          <strong>读取方式：</strong>
+          <div>L1+L2 = 已验证、正在生效的规则，AI 检索时会读取</div>
+          <div>L3 = AI 自己新发现的待定规则，只写入、不读取，避免错误规则污染回答</div>
+        </div>
+      </div>
+
+      <!-- B-3 检索流程 -->
+      <div class="tab-panel" data-panel="b3" hidden>
+        <p class="panel-intro">每次用户提问 → 六步走完 → 输出回答。</p>
+
+        <div class="flow-vertical">
+          <div class="flow-step start">用户提问</div>
+          <div class="flow-arrow"></div>
+
+          <div class="flow-step">第 1 步 · 加载数据</div>
+          <div class="flow-arrow"></div>
+
+          <div class="flow-detail">
+            <div class="flow-detail-title">加载 references</div>
+            <ul class="check-list">
+              <li class="ok"><span class="dot ok"></span>known_patterns.md<span class="right">加载</span></li>
+              <li class="ok"><span class="dot ok"></span>edge_cases.md<span class="right">加载</span></li>
+              <li class="no"><span class="dot no"></span>pending.md<span class="right">不加载</span></li>
+              <li class="no"><span class="dot no"></span>golden_qa.md<span class="right">不加载</span></li>
+            </ul>
+            <div class="flow-detail-note">L1+L2 加载用于回答；L3 / 测试集不进入检索上下文</div>
+          </div>
+          <div class="flow-arrow"></div>
+
+          <div class="flow-step">第 2~5 步 · 理解问题 · 四轮检索 · 读取附件 · 组织输出</div>
+          <div class="flow-arrow"></div>
+
+          <div class="flow-detail">
+            <div class="flow-detail-title">第 6 步 · 自检沉淀</div>
+            <div class="flow-line">发现新表述 / 新边界案例 <span class="arrow-blue">→ 写入 pending.md</span></div>
+            <div class="flow-line dim"><span class="dot no inline"></span> 不再直接写入 known_patterns / edge_cases</div>
+            <div class="flow-detail-note">规则升级由独立的"审核 + 回归测试"流程完成</div>
+          </div>
+          <div class="flow-arrow"></div>
+
+          <div class="flow-step end">输出回答</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 幕三 · 创新 ===== -->
+    <div class="act-block" id="act-3">
+      <div class="act-tag">幕三 · 升级</div>
+      <h3 class="serif act-title">两个核心改进措施</h3>
+      <p class="act-desc">让系统更准、更快的两道关键设计</p>
+
+      <!-- C · 指纹缓存 -->
+      <div class="innov-block">
+        <div class="innov-title"><span class="innov-tag">C</span><span>指纹缓存判定</span></div>
+        <p class="innov-desc">建立缓存数据 · 每次查询前 · 自动校验三元指纹 · 决定是否重建缓存</p>
+
+        <div class="checks-row">
+          <div class="check-item"><div class="check-name">A · 文件名集合</div><div class="check-sub">是否新增/删除</div></div>
+          <div class="check-item"><div class="check-name">B · 修改时间</div><div class="check-sub">mtime 是否变化</div></div>
+          <div class="check-item"><div class="check-name">C · 文件大小</div><div class="check-sub">size 是否变化</div></div>
+        </div>
+
+        <div class="flow-vertical">
+          <div class="flow-step start">用户发起查询</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">读取当前数据文件指纹</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-diamond">
+            <div class="diamond-title">与缓存记录进行指纹比对</div>
+            <div class="diamond-sub">A + B + C 是否一致？</div>
+          </div>
+
+          <!-- ============ 移动端专用·决策大块 ============ -->
+          <div class="decision-card mobile-only">
+            <div class="dc-header">
+              <div class="dc-title">指纹比对</div>
+              <div class="dc-sub">A + B + C 是否一致？</div>
+            </div>
+            <div class="dc-body">
+              <div class="dc-col dc-col-yes">
+                <div class="dc-flag">一致 ✓</div>
+                <div class="dc-name">直接读取缓存</div>
+                <div class="dc-desc">加载已解析数据</div>
+              </div>
+              <div class="dc-col dc-col-no">
+                <div class="dc-flag">不一致 ✗</div>
+                <div class="dc-name">全量重建缓存</div>
+                <div class="dc-desc">解析所有文件</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ 桌面端专用·分叉合流 ============ -->
+          <div class="desktop-only-flow">
+
+          <div class="branch-wrap">
+            <svg class="branch-lines" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="streamH" x1="0%" y1="0" x2="100%" y2="0">
+                  <stop offset="0%"  stop-color="#2B59D3" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#2B59D3" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#2B59D3" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="streamV" x1="0" y1="0%" x2="0" y2="100%">
+                  <stop offset="0%"  stop-color="#2B59D3" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#2B59D3" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#2B59D3" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- 静态线条（底层） -->
+              <g stroke="#B5D4F4" stroke-width="2" fill="none" stroke-linecap="round">
+                <line x1="300" y1="0"   x2="300" y2="20"/>
+                <line x1="120" y1="20"  x2="480" y2="20"/>
+                <line x1="120" y1="20"  x2="120" y2="80"/>
+                <line x1="480" y1="20"  x2="480" y2="80"/>
+              </g>
+              <!-- 流动光带：每条都是一个 16px 长的短 line，y/x 用 animate 推动 -->
+              <!-- 1. 主干向下 (300,0)→(300,20)：先走，后续阶段静默 -->
+              <line x1="300" x2="300" stroke="url(#streamV)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="-16;20;20;20"  keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="0;36;36;36"    keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;1;0;0"  keyTimes="0;0.3;0.32;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 2-L. 横线左 (300,20)→(120,20)：第二阶段启动，从中心向左流 -->
+              <line y1="20" y2="20" stroke="url(#streamH)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="x1" values="316;316;120;120" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="x2" values="300;300;104;104" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.63;0.65;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 2-R. 横线右 (300,20)→(480,20)：第二阶段启动，从中心向右流 -->
+              <line y1="20" y2="20" stroke="url(#streamH)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="x1" values="284;284;480;480" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="x2" values="300;300;496;496" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.63;0.65;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 3-L. 左竖向下 (120,20)→(120,80)：第三阶段启动 -->
+              <line x1="120" x2="120" stroke="url(#streamV)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="4;4;80;80"  keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="20;20;96;96" keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.65;0.67;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 3-R. 右竖向下 (480,20)→(480,80)：第三阶段启动 -->
+              <line x1="480" x2="480" stroke="url(#streamV)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="4;4;80;80"  keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="20;20;96;96" keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.65;0.67;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+            </svg>
+            <div class="branch-row">
+              <div class="branch left">
+                <div class="branch-label ok">一致 ✓</div>
+                <div class="branch-box solid">
+                  <div class="bb-title">直接读取缓存</div>
+                  <div class="bb-sub">加载已解析数据</div>
+                </div>
+              </div>
+              <div class="branch right">
+                <div class="branch-label">不一致 ✗</div>
+                <div class="branch-box dashed">
+                  <div class="bb-title">全量重建缓存</div>
+                  <div class="bb-sub">解析所有文件</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="merge-wrap">
+            <svg class="merge-lines" viewBox="0 0 600 50" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="streamH2" x1="0%" y1="0" x2="100%" y2="0">
+                  <stop offset="0%"  stop-color="#2B59D3" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#2B59D3" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#2B59D3" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="streamV2" x1="0" y1="0%" x2="0" y2="100%">
+                  <stop offset="0%"  stop-color="#2B59D3" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#2B59D3" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#2B59D3" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- 静态线条（底层） -->
+              <g stroke="#B5D4F4" stroke-width="2" fill="none" stroke-linecap="round">
+                <line x1="120" y1="0"  x2="120" y2="25"/>
+                <line x1="480" y1="0"  x2="480" y2="25"/>
+                <line x1="120" y1="25" x2="480" y2="25"/>
+                <line x1="300" y1="25" x2="300" y2="50"/>
+              </g>
+              <!-- 1-L. 左竖向下 (120,0)→(120,25)：阶段 1 -->
+              <line x1="120" x2="120" stroke="url(#streamV2)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="-16;25;25;25" keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="0;41;41;41"   keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.3;0.32;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 1-R. 右竖向下 (480,0)→(480,25)：阶段 1 -->
+              <line x1="480" x2="480" stroke="url(#streamV2)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="-16;25;25;25" keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="0;41;41;41"   keyTimes="0;0.3;0.6;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.3;0.32;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 2-L. 横线汇合 (120,25)→(300,25)：阶段 2，从左→中 -->
+              <line y1="25" y2="25" stroke="url(#streamH2)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="x1" values="104;104;300;300" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="x2" values="120;120;316;316" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.63;0.65;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 2-R. 横线汇合 (480,25)→(300,25)：阶段 2，从右→中 -->
+              <line y1="25" y2="25" stroke="url(#streamH2)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="x1" values="496;496;300;300" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="x2" values="480;480;284;284" keyTimes="0;0.3;0.65;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.63;0.65;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <!-- 3. 主干向下 (300,25)→(300,50)：阶段 3 -->
+              <line x1="300" x2="300" stroke="url(#streamV2)" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="y1" values="9;9;50;50"   keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y2" values="25;25;66;66" keyTimes="0;0.65;1;1" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.65;0.67;1" dur="3s" repeatCount="indefinite"/>
+              </line>
+            </svg>
+          </div>
+
+          </div>
+          <!-- ============ /desktop-only-flow ============ -->
+
+          <div class="flow-step end">返回检索结果</div>
+        </div>
+      </div>
+
+      <!-- D · 四轮检索 -->
+      <div class="innov-block">
+        <div class="innov-title"><span class="innov-tag">D</span><span>四轮检索流程</span></div>
+        <p class="innov-desc">每次查询必须完整走完四轮，才能下结论</p>
+
+        <div class="rounds">
+          <div class="round-item">
+            <div class="round-num">1</div>
+            <div class="round-text"><div class="rt-title">分类字段 · 精确匹配</div><div class="rt-sub">一级 / 二级分类 · 覆盖分类标准明确的情况</div></div>
+          </div>
+          <div class="round-item">
+            <div class="round-num">2</div>
+            <div class="round-text"><div class="rt-title">原文详情 · 双风格搜索</div><div class="rt-sub">口语化 + 书面化关键词 · 应对表述差异</div></div>
+          </div>
+          <div class="round-item">
+            <div class="round-num">3</div>
+            <div class="round-text"><div class="rt-title">特定字段 · 补充搜索</div><div class="rt-sub">分类字段为空时 · 在其他字段中找信息</div></div>
+          </div>
+          <div class="round-item highlight">
+            <div class="round-num solid">4</div>
+            <div class="round-text"><div class="rt-title">反向 + 扩展 · 问题联想</div><div class="rt-sub">"做了 A 没做 B" → 同时搜 "做了 B 没做 A"</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ Method 区 · 方法论 ============ -->
+<section class="section method" id="method">
+  <div class="container">
+    <div class="section-tag">03 / METHOD</div>
+    <h2 class="serif section-title">经验沉淀</h2>
+    <p class="section-body subtitle">项目复盘 · 探索出来的方法论，离专业的Harness Engineering还很遥远</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="mc-num">01</div>
+        <!-- ✏️ 可改：方法论 1 标题 + 描述 -->
+        <h3 class="serif mc-title">外置记忆</h3>
+        <p class="mc-desc">尽管当前大模型的上下文记忆非常长，但要做一个长程任务，单靠上下文记忆仍然不够。Agent采取了外置记忆的方式，生成memory.md来保障记忆的连贯性。Skill规范和references目录也是同理，将关键决策写入文档提供给AI，依靠可被反复读取的外部文件来保障AI的稳定性。</p>
+      </div>
+      <div class="method-card">
+        <div class="mc-num">02</div>
+        <!-- ✏️ 可改：方法论 2 标题 + 描述 -->
+        <h3 class="serif mc-title">先说再做</h3>
+        <p class="mc-desc">先和AI讨论想法，让AI规范实施方案，这个过程中可以尽情提问、尽情质疑，在来回沟通中厘清思路，与AI对齐方案和细节之后再开始动手做。否则，AI可能会按照它的理解去执行，却偏离了自己的本意，导致无用功而徒耗资源。</p>
+      </div>
+      <div class="method-card">
+        <div class="mc-num">03</div>
+        <!-- ✏️ 可改：方法论 3 标题 + 描述 -->
+        <h3 class="serif mc-title">工程思维</h3>
+        <p class="mc-desc">如果说将过去常规的工作看作是解题，其思维多是批判与论证，那么做这件事则是在出题，自己拆解需求、制定方案、迭代改进，扮演的是产品和研发的角色，也接触学习了工程思维，比如：将可复用数据做缓存处理，正式环境与测试环境的隔离以及回归测试。</p>
+      </div>
+      <div class="method-card">
+        <div class="mc-num">04</div>
+        <!-- ✏️ 可改：方法论 4 标题 + 描述 -->
+        <h3 class="serif mc-title">方案审查</h3>
+        <p class="mc-desc">AI善于“奉承”，往往不会指出人的错误，人也容易轻信于AI信誓旦旦的说辞，即便制定的方案、做出的成果存在漏洞和缺陷，当事双方都不易察觉。所以可以引入第三方审查——也就是另一个AI——来确保方案和结果的准确性，或者提供改进的思路。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Writing 区 · 文章 ============ -->
+<section class="section writing" id="writing">
+  <div class="container">
+    <!-- ✏️ 可改：Writing 标签 -->
+    <div class="section-tag">04 / WRITING</div>
+    <!-- ✏️ 可改：Writing 标题 -->
+    <h2 class="serif section-title">最近的一篇思考</h2>
+
+    <!-- ✏️ 可改：文章卡片（href 是文章链接；如果想加第二篇，复制整个 <a>...</a> 块即可） -->
+    <a href="https://mp.weixin.qq.com/s/xfqwSavfEaA9hM43tqJ1vA" target="_blank" rel="noopener" class="article-card">
+      <div class="ac-meta">个人公众号</div>
+      <h3 class="serif ac-title">实名认证场景下收集敏感个人信息的合规分析</h3>
+      <p class="ac-summary">获取用户“同意”是商业活动中处理个人信息最常依赖的合法性基础之一。与此同时，“处理敏感个人信息须取得单独同意”的合规理念也已深入人心。然而，当这些规则被视作理所当然，我们便容易忽略其背后的法律逻辑和适用边界。在法定实名认证场景下，个人信息处理者是否仍需取得用户的“单独同意”？其告知义务又该如何履行？</p>
+      <div class="ac-cta">前往阅读<span class="cta-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-line"></div>
+    <!-- ✏️ 可改：Footer 版权说明 -->
+    <div class="footer-text">© 2026 · 内容均已脱敏 · 个人观点仅供参考</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
